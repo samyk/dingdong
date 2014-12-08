@@ -1,4 +1,3 @@
-Digital Ding Dong Ditch
 # [Digital Ding Dong Ditch](http://samy.pl/dingdong)
 ========
 
