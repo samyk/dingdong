@@ -9,8 +9,8 @@ by [@SamyKamkar](https://twitter.com/samykamkar) // <code@samy.pl> // <http://sa
 
 Code available on [github](https://github.com/samyk/dingdong)
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=nlM2D8qCg-E
-" target="_blank"><img src="http://img.youtube.com/vi/nlM2D8qCg-E/0.jpg" alt="Digital Ding Dong Ditch" width="640" height="480" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=RrPBrwatb1Q
+" target="_blank"><img src="http://img.youtube.com/vi/RrPBrwatb1Q/0.jpg" alt="Digital Ding Dong Ditch" width="640" height="480" border="10" /></a>
 
 ------
 
