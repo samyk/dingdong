@@ -1,5 +1,4 @@
 # [Digital Ding Dong Ditch](http://samy.pl/dingdong)
-========
 
 **Digital Ding Dong Ditch** is a device I created to hack into and ring my best friend's wireless doorbell whenever I send a text message to the device. The best part of the device is that it causes my friend, without fail, to come outside, find no one, and go back in.
 
@@ -9,8 +8,8 @@ by [@SamyKamkar](https://twitter.com/samykamkar) // <code@samy.pl> // <http://sa
 
 Code available on [github](https://github.com/samyk/dingdong)
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=RrPBrwatb1Q
-" target="_blank"><img src="http://img.youtube.com/vi/RrPBrwatb1Q/0.jpg" alt="Digital Ding Dong Ditch" width="640" height="480" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BnwBdeQB7vQ
+" target="_blank"><img src="http://img.youtube.com/vi/BnwBdeQB7vQ/0.jpg" alt="Digital Ding Dong Ditch" width="640" height="480" border="10" /></a>
 
 ------
 
@@ -140,7 +139,7 @@ Now since we know it's amplitude modulation (AM / ASK / OOK) by the looks of it,
 # Interpreting the Signal
 It appears the signal (when looking in Audacity) always sends the same width of the "1"/high signal at 750us (us = microseconds -- 1,000 microseconds in 1 millisecond, and 1,000 milliseconds in 1 second, so 1,000,000 microseconds/us in 1 second)).
 
-The "0"s/lows/no signal also appear to be in blocks of 750us but can be back to back, so you may run into 750us or no signal, or 750*2us (1500us), or 750*3 (2250us), or many more.
+The "0"s/lows/no signal also appear to be in blocks of 750us but can be back to back, so you may run into 750us or no signal, or 750 \* 2us (1500us), or 750 \* 3 (2250us), or many more.
 
 Normally I would take a signal like this and convert it to 1s and 0s. Since 750us seems to be the [lowest common demoninator](http://en.wikipedia.org/wiki/Lowest_common_denominator), we could just take every 750us of a 1high and call it "1", and every 750us of a low/no signal and call it 0. There's a number of ways to do this with software, likely with something like [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki) or possibly [rtl_433](https://github.com/merbanan/rtl_433/commits/master), but we're going to do everything by hand today.
 
