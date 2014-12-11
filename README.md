@@ -1,10 +1,10 @@
 # [Digital Ding Dong Ditch](http://samy.pl/dingdong)
 
-**Digital Ding Dong Ditch** is a device I created to hack into and ring my best friend's wireless doorbell whenever I send a text message to the device. The best part of the device is that it causes my friend, without fail, to come outside, find no one, and go back in.
+**Digital Ding Dong Ditch** is a device to hack into and ring my best friend's wireless doorbell whenever I send a text message to the device. The best part of the device is that it causes my friend, without fail, to come outside, find no one, and go back in.
 
 In this project, we'll learn not only how to create this device, but how to reverse engineer radio frequencies we know nothing about using RTL-SDR (a ~$14 software defined radio), as well as creating hardware and software using Arduino, the Adafruit FONA (GSM/SMS/2G board), an RF (radio frequency) transmitter to transmit custom signals, and even how to reverse engineer a proprietary radio signal we know nothing about!
 
-by [@SamyKamkar](https://twitter.com/samykamkar) // <code@samy.pl> // <http://samy.pl> // Dec 8, 2014
+by [@SamyKamkar](https://twitter.com/samykamkar) // [code@samy.pl] // [http://samy.pl] // Dec 8, 2014
 
 Code available on [github](https://github.com/samyk/dingdong)
 
@@ -65,7 +65,7 @@ Anyway, you can get these dongles new around $14-20. These great chips allow you
 **$6**: [Arduino](http://arduino.cc/en/Main/arduinoBoardUno) is an awesome platform for software and hardware development and allows rapid creation of hardware. We'll be using an [Arduino Nano](http://arduino.cc/en/Main/arduinoBoardNano) clone specifically, however almost any Arduino microcontroller should work. Other microcontrollers or other devices capable of serial communication such as the Raspberry Pi, BeagleBone Black, raw Atmel chip or any other reasonable microcontroller should be able to do what we're doing here.
 
 ### 434MHz ASK RF Transmitter
-**$4**: I use an inexpensive ($4) [434MHz ASK RF transmitter](https://www.sparkfun.com/products/10534) from SparkFun for this project. Note that this device entirely depends on the frequency and modulation of the device you're attempting to transmit to. I knew to get this transmitter only after I determined Matt's doorbell was using the radio frequency of ~434MHz (see how we determine this below or [watch the video](http://youtubes.com)) and that the digital modulation was ASK, which is a type of digital amplitude modulation (AM). You can see the [datasheet here](http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Wireless/General/TWS-BS-3_433.92MHz_ASK_RF_Transmitter_Module_Data_Sheet.pdf).
+**$4**: I use an inexpensive ($4) [434MHz ASK RF transmitter](https://www.sparkfun.com/products/10534) from SparkFun for this project. Note that this device entirely depends on the frequency and modulation of the device you're attempting to transmit to. I knew to get this transmitter only after I determined Matt's doorbell was using the radio frequency of ~434MHz (see how we determine this below or [watch the video](http://www.youtube.com/watch?feature=player_embedded&v=BnwBdeQB7vQ)) and that the digital modulation was ASK, which is a type of digital amplitude modulation (AM). You can see the [datasheet here](http://dlnmh9ip6v2uc.cloudfront.net/datasheets/Wireless/General/TWS-BS-3_433.92MHz_ASK_RF_Transmitter_Module_Data_Sheet.pdf).
 
 ### Adafruit FONA
 **OPTIONAL ($45)**: Adafruit created an awesome board called the [FONA](https://www.adafruit.com/products/1963) which allows you to drop in a 2G SIM card and send/receive SMS's, phone calls, and even use the Internet directly from this little device and a microcontroller. Look ma', I'm on the information super highway!
