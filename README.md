@@ -4,12 +4,12 @@
 
 In this project, we'll learn not only how to create this device, but how to reverse engineer radio frequencies we know nothing about using RTL-SDR (a ~$14 software defined radio), as well as creating hardware and software using Arduino, the Adafruit FONA (GSM/SMS/2G board), an RF (radio frequency) transmitter to transmit custom signals, and even how to reverse engineer a proprietary radio signal we know nothing about!
 
-by [@SamyKamkar](https://twitter.com/samykamkar) // [code@samy.pl] // [http://samy.pl] // Dec 8, 2014
-
-Code available on [github](https://github.com/samyk/dingdong)
+by [@SamyKamkar](https://twitter.com/samykamkar) // code@samy.pl // [http://samy.pl](http://samy.pl) // Dec 11, 2014
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=BnwBdeQB7vQ
-" target="_blank"><img src="http://img.youtube.com/vi/BnwBdeQB7vQ/0.jpg" alt="Digital Ding Dong Ditch" width="640" height="480" border="10" /></a>
+" target="_blank">
+Watch the detailed video (and demo;)
+<img src="http://img.youtube.com/vi/BnwBdeQB7vQ/0.jpg" alt="Digital Ding Dong Ditch" width="640" height="480" border="10" /></a>
 
 ------
 
