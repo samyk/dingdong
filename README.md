@@ -6,8 +6,7 @@ In this project, we'll learn not only how to create this device, but how to reve
 
 by [@SamyKamkar](https://twitter.com/samykamkar) // code@samy.pl // [http://samy.pl](http://samy.pl) // Dec 11, 2014
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BnwBdeQB7vQ
-" target="_blank">
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BnwBdeQB7vQ" target="_blank">
 Watch the detailed video (and demo;)
 <img src="http://img.youtube.com/vi/BnwBdeQB7vQ/0.jpg" alt="Digital Ding Dong Ditch" width="640" height="480" border="10" /></a>
 
@@ -141,7 +140,7 @@ It appears the signal (when looking in Audacity) always sends the same width of 
 
 The "0"s/lows/no signal also appear to be in blocks of 750us but can be back to back, so you may run into 750us or no signal, or 750 \* 2us (1500us), or 750 \* 3 (2250us), or many more.
 
-Normally I would take a signal like this and convert it to 1s and 0s. Since 750us seems to be the [lowest common demoninator](http://en.wikipedia.org/wiki/Lowest_common_denominator), we could just take every 750us of a 1high and call it "1", and every 750us of a low/no signal and call it 0. There's a number of ways to do this with software, likely with something like [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki) or possibly [rtl_433](https://github.com/merbanan/rtl_433/commits/master), but we're going to do everything by hand today.
+Normally I would take a signal like this and convert it to 1s and 0s. Since 750us seems to be the [greatest common divisor](http://en.wikipedia.org/wiki/Greatest_common_divisor), we could just take every 750us of a 1high and call it "1", and every 750us of a low/no signal and call it 0. There's a number of ways to do this with software, likely with something like [GNU Radio](http://gnuradio.org/redmine/projects/gnuradio/wiki) or possibly [rtl_433](https://github.com/merbanan/rtl_433/commits/master), but we're going to do everything by hand today.
 
 In this case because I'm lazy and it doesn't really matter if we have a sequence of 1s/0s, since we just need to retransmit a similar signal, no matter how we interpret it, I opt to instead simply send a "1" for 750us, followed by a "0" up until the next "1". This makes it much simpler for me to just locate where all the 1s are, put the time the "1" started in an array, and have code loop through the array to determine how long it should sends all the 0s for (0 will always be for the `next location of the "1" - this location of the "1" - 750us`). I explain this further in the video above.
 
