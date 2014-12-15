@@ -23,7 +23,7 @@ While he was away from his house, I decided to drive to his house and:
 * reverse engineer the signal in order to interpret it
 * build a device capable of replaying the doorbell signal (ringing his doorbell), and have it work from long distances by allowing it to receive a special text message to trigger the doorbell
 
-Amazing. Hopefully we're still be friends after this. I can now ring his doorbell no matter how far away I am from his house, and he will never see my device as it's hidden across the street wirelessly manipulating his home.
+Amazing. Hopefully we'll still be friends after this. I can now ring his doorbell no matter how far away I am from his house, and he will never see my device as it's hidden across the street wirelessly manipulating his home.
 
 Through this project, I'm going to explain from start to finish how I determined, hacked, reverse engineered, and built each piece and joined them together into this fun project, as well as provide schematics, source code, and explanation from start to finish.
 
