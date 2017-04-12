@@ -8,10 +8,13 @@
 
 #define TX_PIN 9
 #define BIT_PERIOD 700
-#define TIMES 22
+#define TIMES 21
 
 float times[TIMES] = {
-  0, .0015, .003, .0045, .0092, .0122, .0161, .0214, .0268, .0298, .0352, .0413, .0436, .0505, .0535, .0574, .062, .0673, .0719, .0757, .0803 };
+ .0000, .0015, .0030, .0045,  .0092, .0122, .0161, .0214,
+ .0268, .0298, .0352, .0413,  .0436, .0505, .0535, .0574,
+ .0620, .0673, .0719, .0757,  .0803
+};
 
 #include <SoftwareSerial.h>
 
@@ -167,7 +170,7 @@ void single_ring()
 	int last = 0;
 
 	// go through each "1" bit
-	for (int i = 0; i < TIMES-1; i++)
+	for (int i = 0; i < TIMES; i++)
 	{
 		// calculate microseconds (us)
 		int us = times[i] * 1000000;
