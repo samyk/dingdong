@@ -8,12 +8,11 @@
 
 #define TX_PIN 9
 #define BIT_PERIOD 700
-#define TIMES 21
 
-float times[TIMES] = {
- .0000, .0015, .0030, .0045,  .0092, .0122, .0161, .0214,
- .0268, .0298, .0352, .0413,  .0436, .0505, .0535, .0574,
- .0620, .0673, .0719, .0757,  .0803
+long times[] = {
+  0, 1500, 3000, 4500, 9200, 12200, 16100, 21400,
+  26800, 29800, 35200, 41300, 43600, 50500, 53500,
+  57400, 62000, 67300, 71900, 75700, 80300
 };
 
 void setup()
@@ -34,36 +33,29 @@ void ring_bell()
   // the actual doorbell sends our signal 12 times, so we'll emulate it
   for (int j = 0; j < 12; j++)
   {
-		single_ring();
+   single_ring();
   }
 }
 
+
 void single_ring()
 {
-	int last = 0;
-
-	// go through each "1" bit
-	for (int i = 0; i < TIMES; i++)
-	{
-		// calculate microseconds (us)
-		int us = times[i] * 1000000;
-		if (i != 0)
-			delayMicroseconds(us - last - BIT_PERIOD);
-
-		// send a "1" for our BIT_PERIOD which is around 700-800us 
-		digitalWrite(TX_PIN, HIGH);
-		delayMicroseconds(BIT_PERIOD);
-		digitalWrite(TX_PIN, LOW);
-
-		last = us;
-	}
-	delay(20);
+  // go through each "1" bit
+  for (int i = 1; i < sizeof(times) / sizeof(long); i++)
+  {
+    // send a "1" for our BIT_PERIOD which is around 700-800us 
+    digitalWrite(TX_PIN, HIGH);
+    delayMicroseconds(BIT_PERIOD);
+    digitalWrite(TX_PIN, LOW);
+    // calculate microseconds (us)
+    delayMicroseconds(times[i] - times[i - 1] - BIT_PERIOD);
+  }
+  delay(20);
 }
 
 
 void loop()
 {
-	ring_bell();
+  ring_bell();
   delay(30000);
 }
-
